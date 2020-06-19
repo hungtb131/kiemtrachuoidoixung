@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra chuỗi đối xứng hay không ?</title>
+</head>
+<body>
+<script>
+    checkString();
+
+    function isPalindrome(str) {
+        if (str.length < 2)
+            return false;
+        for (let i = 0,j = str.length - 1 ; i < j; i++ ,j--) {
+            if (str[i] != str[j])
+                return false;
+        }
+        return true;
+    }
+
+    function checkString() {
+        let str = prompt("Enter the string to check: ");
+        alert("The string just added is: " + str);
+        if (isPalindrome(str)) {
+            alert("That sequence is Palindrome!!!");
+        } else {
+            alert("That sequence is not Palindrome!!!");
+        }
+    }
+</script>
+</body>
+</html>
